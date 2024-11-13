@@ -1,0 +1,39 @@
+@keyframes scrollMessage {
+    0% {
+      transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+      transform: translateX(-100%); /* End off-screen to the left */
+    }
+  }
+  
+  .messageContainer {
+    position: absolute;
+    top: 80px; /* Space after header */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with reduced opacity */
+    padding: 10px 0;
+    z-index: 20; /* Ensure it stays above other content */
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Vertically align the text */
+    width: 100%;
+    overflow: hidden;
+    height: fit-content;
+  }
+  
+  .message {
+    color: red; /* Red text */
+    font-size: 25px;
+    font-family: 'Digital', sans-serif;
+    font-weight: 700;
+    white-space: nowrap; /* Prevent text wrapping */
+    display: inline-block;
+    animation: scrollMessage 15s linear infinite; /* Infinite scrolling animation */
+    width: 800%; /* Make the text span the entire width */
+    text-align: center; /* Center the text */
+    padding-left: 100%; /* Start off-screen to the right */
+    box-sizing: border-box; /* Ensure padding is part of the width */
+  }
+  
